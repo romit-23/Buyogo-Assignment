@@ -127,13 +127,13 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
    ```bash
    curl http://localhost:8000/health
    ```
-   ![API Health Check](images/api_health_check.png)
+   ![API Health Check](bash-health.png)
 
 4. Send a query:
    ```bash
    curl -X POST "http://localhost:8000/ask" -H "Content-Type: application/json" -d '{"query": "Your question here"}'
    ```
-   ![Query Response](images/query_response.png)
+   ![Query Response](bash-query.png)
 
 ## 📈 Results & Observations
 - **Key insights** from data exploration
