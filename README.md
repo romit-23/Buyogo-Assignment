@@ -14,13 +14,16 @@ The dataset contains structured data related to hotel bookings. Key aspects of t
 _📌 Analysis details can be found in `buyogo-assignment(4).ipynb`_
 
 ## 🏗️ FAISS and LLM Implementation
+
 ### 🔹 FAISS Index and Retrieval
 The FAISS index is used for efficient vector-based retrieval. We load the index and use it with a pre-trained embedding model (`sentence-transformers/all-MiniLM-L6-v2`) to fetch relevant documents.
 
 ### 🔹 LLM Integration
 The implementation integrates a retrieval-augmented generation (RAG) model using Hugging Face’s `Mistral-7B-Instruct-v0.2`. The API is queried to generate concise responses based on retrieved documents.
 
-_📌 Code implementation available in `HotelBooking_RAG.ipynb`_
+📌 Code implementation available in `HotelBooking_RAG.ipynb`  
+📌 The notebook also contains a **comparison of test queries, correct answers, and model-generated responses** to evaluate performance.
+
 
 ## 🖥️ RAG Model Implementation Using Docker
 The RAG model is deployed using `FastAPI` and `Docker`. Below is the implementation:
@@ -135,17 +138,20 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
    ```
    ![Query Response](bash-query.png)
 
-## 📈 Results & Observations
-- **Key insights** from data exploration
-- **Best model performance** and its evaluation metrics
-- **Challenges faced** during implementation
+📈 Challenges & Model Selection
 
-## 🔮 Future Work
-- Improve feature engineering
-- Try deep learning architectures
-- Enhance generalization with more data augmentation techniques
+During the implementation, several challenges were encountered:
+
+Efficient Retrieval: Ensuring that the FAISS index provides accurate and fast retrieval of relevant documents.
+
+LLM Response Quality: Selecting Mistral-7B-Instruct-v0.2 due to its balance of performance, cost, and ability to generate concise answers.
+
+Fine-Tuning: Optimizing query generation and response refinement for better accuracy.
+
+Scalability: Deploying the model efficiently with Docker to ensure smooth API responses in production environments.
+
+The decision to use FAISS and Mistral-7B was based on their strong retrieval capabilities and cost-effective yet powerful language model performance.
 
 ---
-**📌 Author:** Your Name  
-**📧 Contact:** your-email@example.com
-
+**📌 Author:** Romit Addagatla
+**📧 Contact:** addromit2307@gmail.com
