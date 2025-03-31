@@ -1,4 +1,4 @@
-# BUYOGO Assignment - Dataset Analysis & Implementation
+# RAG for Hotels - Dataset Analysis & Implementation
 
 ## 📌 Project Overview
 This project analyzes and implements a machine learning pipeline using the dataset provided in `buyogo-assignment(4).ipynb`. The goal is to extract insights, preprocess data, and develop a model to achieve specific objectives.
